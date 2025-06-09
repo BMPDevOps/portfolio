@@ -4,16 +4,16 @@ FROM nginx:alpine
 # 웹 콘텐츠 복사
 COPY . /usr/share/nginx/html
 
-# Nginx가 임시 파일 및 PID 파일을 쓸 수 있도록 디렉토리 권한 변경
-# /var/cache/nginx는 임시 캐시 파일, /var/run/nginx.pid는 프로세스 ID 파일에 필요
-RUN chown -R nginx:nginx /var/cache/nginx /var/run && \
-    chmod -R 755 /var/cache/nginx /var/run
+# OKD/OpenShift 호환성을 위한 권한 설정
+# 1. 디렉토리의 '그룹'을 root(GID 0)로 변경
+# 2. '그룹'에 쓰기 권한(w)을 부여
+RUN chgrp -R 0 /var/cache/nginx /var/run && \
+    chmod -R g+w /var/cache/nginx /var/run
 
 # 80번 포트 노출
 EXPOSE 80
 
-# Nginx 사용자(non-root)로 전환
-USER nginx
+# USER nginx는 명시하지 않아도 무방 (OKD가 어차피 무시함)
 
 # 컨테이너 실행 명령어
 CMD ["nginx", "-g", "daemon off;"]

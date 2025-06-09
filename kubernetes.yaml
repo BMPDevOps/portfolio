@@ -18,6 +18,7 @@ spec:
       containers:
       - name: portfolio
         image: harbor.bmservice.kro.kr/personal/portfolio:2025-06-09
+        imagePullPolicy: Always
         resources:
           requests:
             memory: "256Mi"
