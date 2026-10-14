@@ -1,625 +1,198 @@
 <!DOCTYPE html>
+
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>박보민 - 인프라 엔지니어 포트폴리오</title>
-    <meta name="description" content="멀티 IDC 환경에서 안정적이고 확장 가능한 인프라를 구축하는 1년차 인프라 엔지니어 박보민의 포트폴리오">
-    <link rel="stylesheet" href="style.css">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="박보민의 DevOps·인프라 포트폴리오. Jenkins·Kubernetes 기반 CI/CD 플랫폼 개발·운영, GitOps 배포 설계와 인프라 자동화 경험을 소개합니다." name="description"/>
+<meta content="#EDF2F7" name="theme-color"/>
+<title>박보민 | DevOps · 인프라 엔지니어</title>
+<link href="style.css" rel="stylesheet"/>
+<script defer="" src="app.js"></script>
 </head>
 <body>
-    <!-- Skip to main content for accessibility -->
-    <a href="#main" class="sr-only">메인 콘텐츠로 건너뛰기</a>
-    
-    <!-- Navigation -->
-    <nav class="navbar" role="navigation" aria-label="메인 내비게이션">
-        <div class="container">
-            <div class="nav-brand">
-                <h1 class="brand-title">ParkBoMin's Portfolio</h1>
-            </div>
-            <ul class="nav-menu" role="menubar">
-                <li role="none"><a href="#home" class="nav-link" role="menuitem">홈</a></li>
-                <li role="none"><a href="#about" class="nav-link" role="menuitem">소개</a></li>
-                <li role="none"><a href="#skills" class="nav-link" role="menuitem">기술스택</a></li>
-                <li role="none"><a href="#experience" class="nav-link" role="menuitem">경력</a></li>
-                <li role="none"><a href="#projects" class="nav-link" role="menuitem">프로젝트</a></li>
-                <li role="none"><a href="#contact" class="nav-link" role="menuitem">연락처</a></li>
-            </ul>
-            <button class="hamburger" aria-label="모바일 메뉴 열기" aria-expanded="false">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-        </div>
-    </nav>
-
-    <main id="main">
-        <!-- Hero Section -->
-        <section id="home" class="hero" aria-labelledby="hero-title">
-            <div class="container">
-                <div class="hero-content">
-                    <h2 id="hero-title" class="hero-title">박보민</h2>
-                    <p class="hero-subtitle">인프라 엔지니어</p>
-                    <p class="hero-description">
-                        <strong>멀티 IDC 환경에서 안정적이고 확장 가능한 인프라를 구축</strong>하며 지속 가능한 시스템을 만들어가는 
-                        1년차 인프라 엔지니어입니다. <strong>Kubernetes, VMware vSphere, Ceph 분산 스토리지</strong> 등 
-                        엔터프라이즈급 인프라 기술을 활용하여 현대적인 클라우드 네이티브 환경을 구축하여 운영하고 있습니다.
-                    </p>
-                    <div class="hero-buttons">
-                        <a href="#projects" class="btn btn--primary">프로젝트 보기</a>
-                        <a href="#contact" class="btn btn--outline">연락하기</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- About Section -->
-        <section id="about" class="section about" aria-labelledby="about-title">
-            <div class="container">
-                <h2 id="about-title" class="section-title">소개</h2>
-                <div class="about-content">
-                    <div class="about-grid">
-                        <div class="about-text">
-                            <p class="intro-paragraph">
-                                안녕하세요! <strong>멀티 IDC 환경에서 안정적이고 확장 가능한 인프라를 구축</strong>하며 지속 가능한 시스템을 만들어가는 
-                                <strong>인프라 엔지니어 박보민</strong>입니다.
-                            </p>
-                            <p>
-                                <strong>제이메타 ITO팀</strong>에서 1년 3개월간 실무 경험을 쌓았으며, 
-                                Windows Server 및 Linux 시스템 운영/유지보수, PowerShell 자동화 스크립트 개발, 
-                                DLP/NAC/ECM 보안 솔루션 운영 등의 업무를 담당했습니다.
-                            </p>
-                            <p>
-                                개인적으로는 <strong>2019년부터 5년간 Homelab을 운영</strong>하며 
-                                ESXi 2대 + Proxmox 1대 구성과 Ceph 분산 스토리지를 관리하고 있습니다. 
-                                이를 통해 <strong>엔터프라이즈급 가상화, 컨테이너 오케스트레이션, 스토리지 관리</strong> 등 
-                                현대적인 인프라 기술을 실습하고 있습니다.
-                            </p>
-                        </div>
-                        <div class="about-highlights">
-                            <h3>핵심 인프라 역량</h3>
-                            <ul class="highlight-list">
-                                <li>
-                                    <strong>컨테이너 오케스트레이션:</strong> Kubernetes, OpenShift 클러스터 구축 및 관리
-                                </li>
-                                <li>
-                                    <strong>서버 가상화:</strong> VMware vSphere, Proxmox VE 기반 고가용성 환경 구성
-                                </li>
-                                <li>
-                                    <strong>분산 스토리지:</strong> Ceph 클러스터 구축 및 RBD/CephFS 운영
-                                </li>
-                                <li>
-                                    <strong>인프라 자동화:</strong> Ansible, Terraform을 통한 Infrastructure as Code
-                                </li>
-                                <li>
-                                    <strong>CI/CD 파이프라인:</strong> GitOps 기반 배포 자동화 환경 구축
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Skills Section -->
-        <section id="skills" class="section skills" aria-labelledby="skills-title">
-            <div class="container">
-                <h2 id="skills-title" class="section-title">인프라 기술스택</h2>
-                <p class="section-description">
-                    <strong>엔터프라이즈급 인프라 기술</strong>과 클라우드 네이티브 도구들을 활용하여 
-                    현대적이고 확장 가능한 시스템을 구축합니다.
-                </p>
-                <div class="skills-grid">
-                    <div class="skill-category card infrastructure-highlight">
-                        <div class="card__body">
-                            <h3>🐳 컨테이너 오케스트레이션</h3>
-                            <p class="category-desc">애플리케이션 컨테이너화 및 대규모 클러스터 관리</p>
-                            <div class="tech-tags">
-                                <span class="tech-tag primary">Kubernetes</span>
-                                <span class="tech-tag primary">OpenShift/OKD</span>
-                                <span class="tech-tag">Docker</span>
-                                <span class="tech-tag">Helm</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="skill-category card infrastructure-highlight">
-                        <div class="card__body">
-                            <h3>☁️ 클라우드 플랫폼</h3>
-                            <p class="category-desc">다양한 클라우드 환경에서의 인프라 구축 및 관리</p>
-                            <div class="tech-tags">
-                                <span class="tech-tag">Naver Cloud</span>
-                                <span class="tech-tag">Oracle Cloud</span>
-                                <span class="tech-tag">KT Cloud</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="skill-category card infrastructure-highlight">
-                        <div class="card__body">
-                            <h3>💻 프로그래밍</h3>
-                            <p class="category-desc">인프라 자동화 및 백엔드 개발</p>
-                            <div class="tech-tags">
-                                <span class="tech-tag">Python</span>
-                                <span class="tech-tag">Go</span>
-                                <span class="tech-tag">Rust</span>
-                                <span class="tech-tag">Bash</span>
-                                <span class="tech-tag">PowerShell</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="skill-category card infrastructure-highlight">
-                        <div class="card__body">
-                            <h3>🖥️ 서버 가상화</h3>
-                            <p class="category-desc">엔터프라이즈급 하이퍼바이저 및 가상화 환경 관리</p>
-                            <div class="tech-tags">
-                                <span class="tech-tag primary">VMware vSphere</span>
-                                <span class="tech-tag primary">Proxmox VE</span>
-                                <span class="tech-tag">KVM/QEMU</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="skill-category card infrastructure-highlight">
-                        <div class="card__body">
-                            <h3>💾 분산 스토리지</h3>
-                            <p class="category-desc">확장 가능한 분산 스토리지 시스템 구축 및 관리</p>
-                            <div class="tech-tags">
-                                <span class="tech-tag primary">Ceph</span>
-                                <span class="tech-tag">TrueNAS Scale</span>
-                                <span class="tech-tag">Unraid</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="skill-category card infrastructure-highlight">
-                        <div class="card__body">
-                            <h3>🤖 인프라 자동화</h3>
-                            <p class="category-desc">Infrastructure as Code 및 CI/CD 파이프라인 구축</p>
-                            <div class="tech-tags">
-                                <span class="tech-tag primary">Ansible</span>
-                                <span class="tech-tag primary">Terraform</span>
-                                <span class="tech-tag primary">ArgoCD</span>
-                                <span class="tech-tag">Jenkins</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="skill-category card infrastructure-highlight">
-                        <div class="card__body">
-                            <h3>📊 모니터링 & 관측</h3>
-                            <p class="category-desc">시스템 성능 모니터링 및 장애 예방</p>
-                            <div class="tech-tags">
-                                <span class="tech-tag">Prometheus</span>
-                                <span class="tech-tag">Grafana</span>
-                                <span class="tech-tag">Zabbix</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="skill-category card infrastructure-highlight">
-                        <div class="card__body">
-                            <h3>🌐 네트워킹 & 서비스 메시</h3>
-                            <p class="category-desc">API 게이트웨이 및 마이크로서비스 통신 관리</p>
-                            <div class="tech-tags">
-                                <span class="tech-tag primary">Istio</span>
-                                <span class="tech-tag">Kong</span>
-                                <span class="tech-tag">Apache APISIX</span>
-                                <span class="tech-tag">NGINX</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Experience Section -->
-        <section id="experience" class="section experience" aria-labelledby="experience-title">
-            <div class="container">
-                <h2 id="experience-title" class="section-title">경력</h2>
-                <div class="experience-timeline">
-                    <div class="experience-item card">
-                        <div class="card__body">
-                            <div class="experience-header">
-                                <h3>제이메타 ITO팀</h3>
-                                <div class="experience-meta">
-                                    <span class="experience-period">2023.01 - 2024.03 (1년 3개월)</span>
-                                    <span class="experience-role">인프라 엔지니어</span>
-                                </div>
-                            </div>
-                            <div class="experience-content">
-                                <p class="experience-summary">
-                                    <strong>Windows Server 및 Linux 시스템 운영/유지보수</strong>를 담당하며, 
+<a class="skip-link" href="#main">본문으로 건너뛰기</a>
+<div class="layout">
+<header class="profile" id="home">
+<div class="identity">
+<a aria-label="박보민, 처음으로" class="name" href="#home">박보민<span lang="en">Park Bomin</span></a>
+<p class="role">DevOps · 인프라 엔지니어</p>
+<p class="profile-note">CI/CD 플랫폼과 인프라를<br/>만들고 운영합니다.</p>
+</div>
+<nav aria-label="페이지 탐색"><a href="#cases">만들고 운영한 것들</a><a href="#experience">실무 경험</a><a href="#projects">프로젝트 목록</a><a href="#skills">사용 기술</a></nav>
+<div class="profile-links">
+<a href="mailto:kumupaf6998@naver.com">이메일 보내기</a>
+<a href="https://github.com/BMPDevOps" rel="noopener noreferrer" target="_blank">GitHub<span class="sr-only"> (새 탭)</span></a>
+</div>
+<p class="profile-location">kumupaf6998@naver.com</p>
+</header>
+<main id="main" tabindex="-1">
+<section aria-labelledby="intro-title" class="intro">
+<h1 id="intro-title">구성한 환경과<br/>구현한 코드.</h1>
+<p>서버 인프라를 취미로 다루면서 Homelab을 운영하고 있습니다. 팀 프로젝트에서는 인프라와 배포 자동화를 맡았고, 서비스 개발도 함께 했습니다.</p>
+<div class="current-work"><span class="current-label">현재</span><span><strong>NEXTCI</strong> DevOps 운영팀</span><span class="period">2025.08.25 ~</span></div>
+</section><section aria-labelledby="cases-title" class="content-section cases" id="cases">
+<div class="section-heading"><h2 id="cases-title">만들고 운영한 것들</h2></div>
+<article class="case" id="case-homelab"><div class="case-heading"><h3>Homelab</h3><span class="period">2019.06 ~ 현재</span></div><p class="case-story">서버 인프라를 다루는 게 취미입니다. 2019년 6월부터 집에서 서버를 구성하고 운영해 왔습니다. 업무나 프로젝트와 별개로, 직접 환경을 만들고 여러 기술을 붙여보는 공간입니다.</p><p class="case-story">ESXi 서버 2대와 Proxmox VE 서버 1대를 사용하고 있습니다. vSphere에서 vMotion, HA, DRS를 설정했고, 스토리지는 Ceph로 구성했습니다. 네트워크는 10GbE와 2.5GbE를 사용합니다.</p><p class="case-story">그 위에 OKD를 마스터 3노드, 워커 3노드로 구성했습니다. 컨테이너에서 저장 공간을 사용할 수 있도록 Ceph RBD를 StorageClass에 연결했습니다.</p><p class="case-story">배포는 ArgoCD로 관리하고, 이미지와 Helm 차트는 Harbor에 저장합니다. Ansible과 Terraform으로 프로비저닝과 설정 관리를 자동화했으며, Prometheus와 Grafana로 서버와 클러스터 상태를 확인합니다.</p><div aria-label="컴퓨팅은 ESXi 2대와 Proxmox 1대, 스토리지는 Ceph RBD를 OKD StorageClass에 연결. ArgoCD가 OKD 배포를 관리하고 Prometheus와 Grafana로 관찰합니다." class="system-map" role="img"><div><b>컴퓨팅</b><span>ESXi × 2 / Proxmox VE × 1</span></div><div><b>영속 스토리지</b><span>Ceph RBD → OKD StorageClass</span></div><div><b>배포</b><span>ArgoCD → OKD (마스터 3 / 워커 3)</span></div><div><b>관측</b><span>Prometheus → Grafana</span></div></div></article>
+<article class="case" id="case-stoock"><div class="case-heading"><h3>STOOCK에서 만든 친구 서비스</h3><span class="period">2024.10 ~ 2025.02</span></div><p class="case-story">STOOCK은 MSA 기반 모의투자 애플리케이션입니다. 저는 OKD 기반 인프라와 배포 자동화를 맡았고, Go(Gin)로 친구 서비스도 만들었습니다.</p><p class="case-story">친구 서비스에는 Neo4j를 사용했습니다. 사용자끼리 어떻게 연결되어 있는지 관계도로 표현하기 좋아서 선택했습니다. 사용자를 노드로 두고 친구 연결을 FRIEND 관계로 저장하니, 사용자 사이의 연결을 그래프 형태로 나타낼 수 있었습니다.</p><p class="case-story">API는 Gin으로 요청을 받고 Controller, Service, Repository를 거쳐 Neo4j에 접근하도록 구성했습니다. 친구 연결을 추가할 때는 두 사용자 노드를 찾은 뒤 MERGE로 관계를 만들었습니다. 친구 목록은 해당 사용자에서 나가는 FRIEND 관계를 따라 조회하도록 구현했습니다.</p><pre aria-label="저장소의 관계 생성 쿼리 발췌"><code>MATCH (u:User {id: $userID})
+MATCH (t:User {id: $targetUserID})
+MERGE (u)-[r: FRIEND]-&gt;(t)
+RETURN r</code></pre><ul class="source-links"><li><a href="https://github.com/ST00CK/friend/blob/c1cd8fe06386f957d146b08c48e58f11b1b580a9/main.go#L11-L17" rel="noopener noreferrer" target="_blank">Gin 서버 구성</a></li><li><a href="https://github.com/ST00CK/friend/blob/c1cd8fe06386f957d146b08c48e58f11b1b580a9/repository/neo4jUserRepository.go#L118-L170" rel="noopener noreferrer" target="_blank">관계 조회·생성 쿼리</a></li></ul></article>
+<article class="case" id="case-groupbee"><div class="case-heading"><h3>GROUPBEE에서 맡은 인프라와 유저 서비스</h3><span class="period">2024.06 ~ 2024.09</span></div><p class="case-story">GROUPBEE는 Kubernetes 기반 그룹웨어 프로젝트입니다. 저는 기술 총괄과 DevOps를 맡으면서 유저 서비스도 개발했습니다.</p><p class="case-story">Naver Cloud의 NKS로 클러스터를 구성하고 Kong API Gateway와 Istio를 연결했습니다. 서비스별로 네임스페이스를 나누고 Helm 차트로 배포 설정을 관리했습니다. Jenkins와 ArgoCD를 연결해 빌드부터 배포까지 자동화했습니다.</p><p class="case-story">사용자 관리에는 FreeIPA를, 세션 관리에는 Redis를 사용했습니다. Employee 서비스에서는 Redis Hash에 저장된 Spring Session 정보를 조회하는 코드를 작성했습니다. 전달받은 키로 principal 관련 값을 읽고, 값이 없으면 null을 반환하도록 구성했습니다.</p><ul class="source-links"><li><a href="https://github.com/groupBee/groupBee-Employee/blob/992319f86fea16ec528a6e5f93040be0cacf17ea/src/main/java/groupbee/employee/config/RedisConfig.java" rel="noopener noreferrer" target="_blank">Redis 연결·자료형 설정</a></li><li><a href="https://github.com/groupBee/groupBee-Employee/blob/992319f86fea16ec528a6e5f93040be0cacf17ea/src/main/java/groupbee/employee/service/session/SessionService.java#L17-L29" rel="noopener noreferrer" target="_blank">세션 Hash 조회 구현</a></li></ul></article>
+</section><section aria-labelledby="experience-title" class="content-section" id="experience">
+<div class="section-heading"><h2 id="experience-title">경력</h2><p>역할과 업무 범위</p></div><p class="section-note">회사 업무는 역할과 범위만 공개합니다. 아래 기술 사례는 개인·팀 프로젝트와 공개 코드에 한정합니다.</p>
+<article class="job">
+<div class="job-heading"><h3>NEXTCI DevOps 운영팀</h3><span class="period">2025.08.25 - 현재</span></div>
+<p class="job-role">DevOps 엔지니어</p>
+<p class="experience-summary">
+<strong>차량 SW 통합 CI/CD 플랫폼 개발·운영</strong>을 담당하며,
+                                    파이프라인 기능 개발부터 Kubernetes 이관, 배포 설계, 모니터링 및 장애 대응을 수행했습니다.
+                                </p>
+</article>
+<article class="job">
+<div class="job-heading"><h3>제이메타 ITO팀</h3><span class="period">2023.01 - 2024.03 (1년 3개월)</span></div>
+<p class="job-role">인프라 엔지니어</p>
+<p class="experience-summary">
+<strong>Windows Server 및 Linux 시스템 운영/유지보수</strong>를 담당하며,
                                     PowerShell 자동화 스크립트 개발과 보안 시스템 관리 업무를 수행했습니다.
                                 </p>
-                                <h4>주요 업무 및 성과</h4>
-                                <ul class="experience-achievements">
-                                    <li><strong>시스템 운영:</strong> Windows Server 및 Linux(CentOS) 시스템 운영/유지보수</li>
-                                    <li><strong>자동화 개발:</strong> PowerShell 자동화 스크립트 개발로 반복 업무 효율성 향상</li>
-                                    <li><strong>보안 시스템 운영:</strong> DLP(Data Loss Prevention), NAC(Network Access Control), ECM 보안 솔루션 운영 및 관리</li>
-                                    <li><strong>서버 점검 및 장애 대응:</strong> 24/7 서버 모니터링 및 장애 발생 시 신속한 복구 작업</li>
-                                    <li><strong>사용자 지원:</strong> 권한 관리 및 헬프데스크 운영으로 IT 서비스 품질 향상</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Projects Section -->
-        <section id="projects" class="section projects" aria-labelledby="projects-title">
-            <div class="container">
-                <h2 id="projects-title" class="section-title">인프라 프로젝트</h2>
-                <p class="section-description">
-                    개인 학습부터 팀 프로젝트까지, <strong>다양한 환경에서 엔터프라이즈급 인프라 구축</strong> 및 DevOps 경험을 쌓아왔습니다.
-                </p>
-                <div class="projects-grid">
-                    <!-- HOMELAB Project -->
-                    <article class="project-card card flagship-project">
-                        <div class="card__body">
-                            <div class="project-header">
-                                <h3>🏠 HOMELAB 프로젝트</h3>
-                                <span class="project-period">2019.06 - 현재 (5년간 운영)</span>
-                                <span class="project-badge">플래그십 프로젝트</span>
-                            </div>
-                            
-                            <div class="project-goal">
-                                <h4>🎯 프로젝트 목표</h4>
-                                <p>개인 학습 및 다양한 기술 스택 테스트를 위한 <strong>엔터프라이즈급 인프라 환경 구축</strong></p>
-                            </div>
-
-                            <div class="infrastructure-overview">
-                                <h4>🏗️ 인프라 아키텍처</h4>
-                                <div class="infrastructure-grid">
-                                    <div class="infra-item">
-                                        <strong>컴퓨팅:</strong> ESXi 서버 2대 + Proxmox VE 서버 1대
+</article>
+</section>
+<section aria-labelledby="projects-title" class="content-section" id="projects">
+<div class="section-heading"><h2 id="projects-title">프로젝트 목록</h2><p>개인 운영과 팀 프로젝트</p></div>
+<p class="section-note">프로젝트를 선택하면 구성과 수행 업무를 볼 수 있습니다.</p>
+<details class="project">
+<summary><span class="project-name">HOMELAB</span><span class="period">2019.06 - 현재</span><span aria-hidden="true" class="disclosure"></span></summary>
+<div class="project-content">
+<p class="project-purpose">개인 학습 및 다양한 기술 스택 테스트를 위한 엔터프라이즈급 인프라 환경 구축</p>
+<div class="architecture-details">
+<div class="arch-item">
+<strong>컴퓨팅:</strong> ESXi 서버 2대 + Proxmox VE 서버 1대
                                     </div>
-                                    <div class="infra-item">
-                                        <strong>스토리지:</strong> Ceph 분산 스토리지 클러스터
+<div class="arch-item">
+<strong>스토리지:</strong> Ceph 분산 스토리지 클러스터
                                     </div>
-                                    <div class="infra-item">
-                                        <strong>네트워킹:</strong> 10GbE 네트워크 및 2.5GbE 네트워크 구축
+<div class="arch-item">
+<strong>네트워킹:</strong> 10GbE 네트워크 및 2.5GbE 네트워크 구축
                                     </div>
-                                    <div class="infra-item">
-                                        <strong>가상화:</strong> vSphere 클러스터 + KVM 하이브리드 환경
+<div class="arch-item">
+<strong>가상화:</strong> vSphere 클러스터 + KVM 하이브리드 환경
                                     </div>
-                                </div>
-                            </div>
-
-                            <div class="my-work-section">
-                                <h4 class="my-work-title">⚡ 내가 담당한 주요 업무</h4>
-                                <ul class="my-work-list">
-                                    <li><strong>ESXi 서버 2대를 VMware vSphere로 클러스터링하여 고가용성 환경 구성</strong> - vMotion, HA, DRS 설정으로 무중단 서비스 보장</li>
-                                    <li><strong>Ceph 기반 분산 스토리지 클러스터 구축으로 확장 가능한 데이터 관리 환경 확보</strong> - OSD, MON, MGR 노드 구성 및 RBD로 Kubernetes StorageClass로 연결</li>
-                                    <li><strong>OKD 클러스터 구축 및 ArgoCD GitOps 배포 자동화 환경 구성</strong> - 마스터 3노드 + 워커 3노드 클러스터 운영</li>
-                                    <li><strong>Ansible/Terraform을 이용한 Infrastructure as Code 구현</strong> - 인프라 프로비저닝 및 설정 관리 자동화</li>
-                                    <li><strong>Prometheus + Grafana 모니터링 스택 구축</strong> - 시스템 메트릭 수집 및 대시보드 구성</li>
-                                    <li><strong>Harbor를 활용한 레지스트리 관리</strong> - 컨테이너 이미지 관리 및 Helm 차트 관리</li>
-                                </ul>
-                            </div>
-
-                            <div class="project-achievements">
-                                <h4>📈 기술적 성과</h4>
-                                <ul class="achievement-list">
-                                    <li>99.9% 가동 시간 달성 (연간 8시간 이하 다운타임)</li>
-                                    <li>자동화를 통한 운영 작업 시간 단축</li>
-                                    <li>스토리지 풀 안정적 운영 (데이터 손실 0건)</li>
-                                </ul>
-                            </div>
-
-                            <div class="tech-tags">
-                                <span class="tech-tag primary">VMware vSphere</span>
-                                <span class="tech-tag primary">Proxmox VE</span>
-                                <span class="tech-tag primary">Ceph</span>
-                                <span class="tech-tag primary">OKD(OpenShift Origin)</span>
-                                <span class="tech-tag primary">ArgoCD</span>
-                                <span class="tech-tag">Ansible</span>
-                                <span class="tech-tag">Terraform</span>
-                                <span class="tech-tag">Prometheus</span>
-                                <span class="tech-tag">Grafana</span>
-                            </div>
-                        </div>
-                    </article>
-
-                    <!-- STOOCK Project -->
-                    <article class="project-card card">
-                        <div class="card__body">
-                            <div class="project-header">
-                                <h3>📈 STOOCK 프로젝트</h3>
-                                <span class="project-period">2024.10 - 현재</span>
-                            </div>
-                            
-                            <div class="project-goal">
-                                <h4>🎯 프로젝트 목표</h4>
-                                <p><strong>마이크로서비스 아키텍처</strong> 기반 모의투자 애플리케이션 구현 및 <strong>OpenShift 기반 컨테이너 플랫폼</strong> 구축</p>
-                            </div>
-
-                            <div class="infrastructure-overview">
-                                <h4>🏗️ 인프라 아키텍처</h4>
-                                <div class="infrastructure-grid">
-                                    <div class="infra-item">
-                                        <strong>플랫폼:</strong> OKD(OpenShift Origin) 클러스터
+</div><h4>수행 업무</h4><ul class="work-list"><li><strong>ESXi 서버 2대를 VMware vSphere로 클러스터링하여 고가용성 환경 구성</strong> - vMotion, HA, DRS 설정으로 무중단 서비스 보장</li><li><strong>Ceph 기반 분산 스토리지 클러스터 구축으로 확장 가능한 데이터 관리 환경 확보</strong> - OSD, MON, MGR 노드 구성 및 RBD로 Kubernetes StorageClass로 연결</li><li><strong>OKD 클러스터 구축 및 ArgoCD GitOps 배포 자동화 환경 구성</strong> - 마스터 3노드 + 워커 3노드 클러스터 운영</li><li><strong>Ansible/Terraform을 이용한 Infrastructure as Code 구현</strong> - 인프라 프로비저닝 및 설정 관리 자동화</li><li><strong>Prometheus + Grafana 모니터링 스택 구축</strong> - 시스템 메트릭 수집 및 대시보드 구성</li><li><strong>Harbor를 활용한 레지스트리 관리</strong> - 컨테이너 이미지 관리 및 Helm 차트 관리</li></ul>
+<h4>결과</h4><ul class="work-list"><li>99.9% 가동 시간 달성 (연간 8시간 이하 다운타임)</li><li>자동화를 통한 운영 작업 시간 단축</li><li>스토리지 풀 안정적 운영 (데이터 손실 0건)</li></ul>
+<p class="project-stack">VMware vSphere, Proxmox VE, Ceph, OKD(OpenShift Origin), ArgoCD, Ansible, Terraform, Prometheus, Grafana</p>
+</div></details>
+<details class="project">
+<summary><span class="project-name">STOOCK</span><span class="period">2024.10 - 2025.02</span><span aria-hidden="true" class="disclosure"></span></summary>
+<div class="project-content">
+<p class="project-purpose">마이크로서비스 아키텍처 기반 모의투자 애플리케이션 구현 및 OpenShift 기반 컨테이너 플랫폼 구축</p>
+<div class="architecture-details">
+<div class="arch-item">
+<strong>플랫폼:</strong> OKD(OpenShift Origin) 클러스터
                                     </div>
-                                    <div class="infra-item">
-                                        <strong>스토리지:</strong> Rook-Ceph External Cluster 연동
+<div class="arch-item">
+<strong>스토리지:</strong> Rook-Ceph External Cluster 연동
                                     </div>
-                                    <div class="infra-item">
-                                        <strong>서비스 메시:</strong> Istio Ambient Mode
+<div class="arch-item">
+<strong>서비스 메시:</strong> Istio Ambient Mode
                                     </div>
-                                    <div class="infra-item">
-                                        <strong>API Gateway:</strong> Apache APISIX
+<div class="arch-item">
+<strong>API Gateway:</strong> Apache APISIX
                                     </div>
-                                </div>
-                            </div>
-
-                            <div class="my-work-section">
-                                <h4 class="my-work-title">⚡ 내가 담당한 주요 업무</h4>
-                                <ul class="my-work-list">
-                                    <li><strong>Istio Ambient 모드 구축으로 서비스 메시를 통한 마이크로서비스 간 통신 제어</strong> - mTLS, 트래픽 정책 구성</li>
-                                    <li><strong>APISIX API 게이트웨이 설정 및 관리</strong> - 라우팅 구현</li>
-                                    <li><strong>Redpanda 이벤트 스트리밍 플랫폼 구축</strong> - Kafka 호환 메시지 브로커 구성</li>
-                                    <li><strong>ArgoCD를 활용한 CI/CD 파이프라인 구축 및 GitOps 워크플로우 관리</strong></li>
-                                    <li><strong>Neo4j를 활용한 데이터 관리</strong> - 친구 서비스 관계 관리</li>
-                                    <li><strong>Go 언어를 활용한 API 구현</strong> - 친구 서비스 구현</li>
-                                </ul>
-                            </div>
-
-                            <div class="project-achievements">
-                                <h4>📈 기술적 성과</h4>
-                                <ul class="achievement-list">
-                                    <li>마이크로서비스 15개 컨테이너화 및 자동 배포</li>
-                                    <li>GitOps 기반 무중단 배포 환경 구축</li>
-                                    <li>서비스 메시를 통한 보안 및 관측성 향상</li>
-                                </ul>
-                            </div>
-
-                            <div class="tech-tags">
-                                <span class="tech-tag primary">OKD</span>
-                                <span class="tech-tag primary">Ceph</span>
-                                <span class="tech-tag primary">Istio Ambient</span>
-                                <span class="tech-tag">Apache APISIX</span>
-                                <span class="tech-tag">Redpanda</span>
-                                <span class="tech-tag">Helm</span>
-                                <span class="tech-tag">ArgoCD</span>
-                                <span class="tech-tag">Neo4j</span>
-                                <span class="tech-tag">Go (Gin)</span>
-                            </div>
-                            <div class="project-links">
-                                <a href="https://github.com/ST00CK" target="_blank" rel="noopener noreferrer" class="btn btn--outline btn--sm">
-                                    GitHub 저장소 보기
-                                </a>
-                            </div>
-                        </div>
-                    </article>
-
-                    <!-- GROUPBEE Project -->
-                    <article class="project-card card">
-                        <div class="card__body">
-                            <div class="project-header">
-                                <h3>👥 GROUPBEE 프로젝트</h3>
-                                <span class="project-period">2024.06 - 2024.09</span>
-                            </div>
-                            
-                            <div class="project-goal">
-                                <h4>🎯 프로젝트 목표</h4>
-                                <p><strong>Kubernetes 기반 MSA 그룹웨어 시스템</strong> 개발 및 엔터프라이즈급 인프라 환경 구축</p>
-                            </div>
-
-                            <div class="infrastructure-overview">
-                                <h4>🏗️ 인프라 아키텍처</h4>
-                                <div class="infrastructure-grid">
-                                    <div class="infra-item">
-                                        <strong>컨테이너:</strong> Kubernetes 클러스터
+</div><h4>수행 업무</h4><ul class="work-list"><li><strong>Istio Ambient 모드 구축으로 서비스 메시를 통한 마이크로서비스 간 통신 제어</strong> - mTLS, 트래픽 정책 구성</li><li><strong>APISIX API 게이트웨이 설정 및 관리</strong> - 라우팅 구현</li><li><strong>Redpanda 이벤트 스트리밍 플랫폼 구축</strong> - Kafka 호환 메시지 브로커 구성</li><li><strong>ArgoCD를 활용한 CI/CD 파이프라인 구축 및 GitOps 워크플로우 관리</strong></li><li><strong>Neo4j를 활용한 데이터 관리</strong> - 친구 서비스 관계 관리</li><li><strong>Go 언어를 활용한 API 구현</strong> - 친구 서비스 구현</li></ul>
+<h4>결과</h4><ul class="work-list"><li>마이크로서비스 15개 컨테이너화 및 자동 배포</li><li>GitOps 기반 무중단 배포 환경 구축</li><li>서비스 메시를 통한 보안 및 관측성 향상</li></ul>
+<p class="project-stack">OKD, Ceph, Istio Ambient, Apache APISIX, Redpanda, Helm, ArgoCD, Neo4j, Go (Gin)</p>
+<div class="project-links"><a class="btn btn--outline btn--sm" href="https://github.com/ST00CK" rel="noopener noreferrer" target="_blank">
+                                    GitHub
+                                </a></div>
+</div></details>
+<details class="project">
+<summary><span class="project-name">GROUPBEE</span><span class="period">2024.06 - 2024.09</span><span aria-hidden="true" class="disclosure"></span></summary>
+<div class="project-content">
+<p class="project-purpose">Kubernetes 기반 MSA 그룹웨어 시스템 개발 및 엔터프라이즈급 인프라 환경 구축</p>
+<div class="architecture-details">
+<div class="arch-item">
+<strong>컨테이너:</strong> Kubernetes 클러스터
                                     </div>
-                                    <div class="infra-item">
-                                        <strong>API Gateway:</strong> Kong API Gateway 사용
+<div class="arch-item">
+<strong>API Gateway:</strong> Kong API Gateway 사용
                                     </div>
-                                    <div class="infra-item">
-                                        <strong>서비스 메시:</strong> Istio Sidecar 모드
+<div class="arch-item">
+<strong>서비스 메시:</strong> Istio Sidecar 모드
                                     </div>
-                                    <div class="infra-item">
-                                        <strong>인증 시스템:</strong> LDAP + Redis 세션
+<div class="arch-item">
+<strong>인증 시스템:</strong> LDAP + Redis 세션
                                     </div>
-                                </div>
-                            </div>
-
-                            <div class="my-work-section">
-                                <h4 class="my-work-title">⚡ 내가 담당한 주요 업무</h4>
-                                <ul class="my-work-list">
-                                    <li><strong>Kubernetes 클러스터 직접 구축 및 마이크로서비스 아키텍처 설계</strong> - NKS(Naver Cloud Kubernetes Service) 이용한 클러스터 구성, 네임스페이스 분리</li>
-                                    <li><strong>Kong API 게이트웨이 설정 및 Istio Sidecar 서비스 메시 구성</strong> - 마이크로서비스 간 통신 보안 및 트래픽 관리</li>
-                                    <li><strong>LDAP(FreeIPA) 서비스 구축 및 Redis 기반 세션 인증 시스템 개발</strong> - 중앙화된 사용자 관리 및 세션 관리</li>
-                                    <li><strong>ArgoCD를 활용한 CI/CD 파이프라인 구축 및 GitOps 워크플로우 관리</strong></li>
-                                    <li><strong>Helm 차트를 사용한 서비스별 배포 템플릿화 및 네임스페이스 분리</strong></li>
-                                </ul>
-                            </div>
-
-                            <div class="project-achievements">
-                                <h4>📈 기술적 성과</h4>
-                                <ul class="achievement-list">
-                                    <li>12개 마이크로서비스 컨테이너화 및 배포 자동화</li>
-                                    <li>LDAP 기반 SSO 인증 시스템 구축</li>
-                                    <li>GitOps 기반 지속적 배포 환경 구축</li>
-                                </ul>
-                            </div>
-
-                            <div class="tech-tags">
-                                <span class="tech-tag primary">Kubernetes</span>
-                                <span class="tech-tag primary">Kong</span>
-                                <span class="tech-tag primary">Istio</span>
-                                <span class="tech-tag">LDAP</span>
-                                <span class="tech-tag">Redis</span>
-                                <span class="tech-tag">ArgoCD</span>
-                                <span class="tech-tag">Helm</span>
-                                <span class="tech-tag">Spring Boot</span>
-                            </div>
-                            <div class="project-links">
-                                <a href="https://github.com/groupBee" target="_blank" rel="noopener noreferrer" class="btn btn--outline btn--sm">
-                                    GitHub 조직 보기
-                                </a>
-                            </div>
-                        </div>
-                    </article>
-
-                    <!-- DEVLOG Project -->
-                    <article class="project-card card">
-                        <div class="card__body">
-                            <div class="project-header">
-                                <h3>📝 DEVLOG 프로젝트</h3>
-                                <span class="project-period">2022.03 - 2022.12</span>
-                            </div>
-                            
-                            <div class="project-goal">
-                                <h4>🎯 프로젝트 목표</h4>
-                                <p>사용자 친화적인 블로그 플랫폼 개발 및 <strong>Docker 기반 CI/CD 파이프라인</strong> 구축</p>
-                            </div>
-
-                            <div class="infrastructure-overview">
-                                <h4>🏗️ 인프라 아키텍처</h4>
-                                <div class="infrastructure-grid">
-                                    <div class="infra-item">
-                                        <strong>컨테이너:</strong> Docker Compose 기반 멀티 컨테이너
+</div><h4>수행 업무</h4><ul class="work-list"><li><strong>Kubernetes 클러스터 직접 구축 및 마이크로서비스 아키텍처 설계</strong> - NKS(Naver Cloud Kubernetes Service) 이용한 클러스터 구성, 네임스페이스 분리</li><li><strong>Kong API 게이트웨이 설정 및 Istio Sidecar 서비스 메시 구성</strong> - 마이크로서비스 간 통신 보안 및 트래픽 관리</li><li><strong>LDAP(FreeIPA) 서비스 구축 및 Redis 기반 세션 인증 시스템 개발</strong> - 중앙화된 사용자 관리 및 세션 관리</li><li><strong>ArgoCD를 활용한 CI/CD 파이프라인 구축 및 GitOps 워크플로우 관리</strong></li><li><strong>Helm 차트를 사용한 서비스별 배포 템플릿화 및 네임스페이스 분리</strong></li></ul>
+<h4>결과</h4><ul class="work-list"><li>12개 마이크로서비스 컨테이너화 및 배포 자동화</li><li>LDAP 기반 SSO 인증 시스템 구축</li><li>GitOps 기반 지속적 배포 환경 구축</li></ul>
+<p class="project-stack">Kubernetes, Kong, Istio, LDAP, Redis, ArgoCD, Helm, Spring Boot</p>
+<div class="project-links"><a class="btn btn--outline btn--sm" href="https://github.com/groupBee" rel="noopener noreferrer" target="_blank">
+                                    GitHub
+                                </a></div>
+</div></details>
+<details class="project">
+<summary><span class="project-name">DEVLOG</span><span class="period">2024.04 - 2024.05</span><span aria-hidden="true" class="disclosure"></span></summary>
+<div class="project-content">
+<p class="project-purpose">사용자 친화적인 블로그 플랫폼 개발 및 Docker 기반 CI/CD 파이프라인 구축</p>
+<div class="architecture-details">
+<div class="arch-item">
+<strong>컨테이너:</strong> Docker Compose 기반 멀티 컨테이너
                                     </div>
-                                    <div class="infra-item">
-                                        <strong>CI/CD:</strong> Jenkins Pipeline
+<div class="arch-item">
+<strong>CI/CD:</strong> Jenkins Pipeline
                                     </div>
-                                    <div class="infra-item">
-                                        <strong>환경 분리:</strong> Dev/Test/Prod 환경
+<div class="arch-item">
+<strong>환경 분리:</strong> Dev/Test/Prod 환경
                                     </div>
-                                </div>
-                            </div>
-
-                            <div class="my-work-section">
-                                <h4 class="my-work-title">⚡ 내가 담당한 주요 업무</h4>
-                                <ul class="my-work-list">
-                                    <li><strong>Docker 컨테이너 기반 서비스 배포 환경 구성</strong> - 멀티 스테이지 빌드, 이미지 최적화</li>
-                                    <li><strong>Jenkins CI/CD 파이프라인 설계 및 구축</strong> - 자동화된 빌드, 테스트, 배포 프로세스</li>
-                                    <li><strong>개발, 테스트, 프로덕션 환경 분리 및 배포 자동화</strong> - Blue-Green 배포 전략 적용</li>
-                                </ul>
-                            </div>
-
-                            <div class="project-achievements">
-                                <h4>📈 기술적 성과</h4>
-                                <ul class="achievement-list">
-                                    <li>배포 시간 단축 (수동 → 자동)</li>
-                                    <li>환경별 일관된 배포 프로세스 구축</li>
-                                    <li>롤백 시간 단축</li>
-                                </ul>
-                            </div>
-
-                            <div class="tech-tags">
-                                <span class="tech-tag primary">Jenkins</span>
-                                <span class="tech-tag primary">Docker</span>
-                                <span class="tech-tag">Spring Boot</span>
-                                <span class="tech-tag">MySQL</span>
-                            </div>
-                            <div class="project-links">
-                                <a href="https://github.com/BMPDevOps/DevLog" target="_blank" rel="noopener noreferrer" class="btn btn--outline btn--sm">
-                                    GitHub 저장소 보기
-                                </a>
-                            </div>
-                        </div>
-                    </article>
-
-                    <!-- CARE BICYCLE CASE Project -->
-                    <article class="project-card card">
-                        <div class="card__body">
-                            <div class="project-header">
-                                <h3>🚴‍♂️ CARE BICYCLE CASE</h3>
-                                <span class="project-period">2019.12</span>
-                            </div>
-                            
-                            <div class="project-goal">
-                                <h4>🎯 프로젝트 목표</h4>
-                                <p><strong>IoT 기반 자전거 안전 관리 시스템</strong> 개발 및 임베디드 인프라 구축</p>
-                            </div>
-
-                            <div class="infrastructure-overview">
-                                <h4>🏗️ 인프라 아키텍처</h4>
-                                <div class="infrastructure-grid">
-                                    <div class="infra-item">
-                                        <strong>컨테이너:</strong> Docker 기반 컨테이너화
+</div><h4>수행 업무</h4><ul class="work-list"><li><strong>Docker 컨테이너 기반 서비스 배포 환경 구성</strong> - 멀티 스테이지 빌드, 이미지 최적화</li><li><strong>Jenkins CI/CD 파이프라인 설계 및 구축</strong> - 자동화된 빌드, 테스트, 배포 프로세스</li><li><strong>개발, 테스트, 프로덕션 환경 분리 및 배포 자동화</strong> - Blue-Green 배포 전략 적용</li></ul>
+<h4>결과</h4><ul class="work-list"><li>배포 시간 단축 (수동 → 자동)</li><li>환경별 일관된 배포 프로세스 구축</li><li>롤백 시간 단축</li></ul>
+<p class="project-stack">Jenkins, Docker, Spring Boot, MySQL</p>
+<div class="project-links"><a class="btn btn--outline btn--sm" href="https://github.com/BMPDevOps/DevLog" rel="noopener noreferrer" target="_blank">
+                                    GitHub
+                                </a></div>
+</div></details>
+<details class="project">
+<summary><span class="project-name">CARE BICYCLE CASE</span><span class="period">2022.03 - 2022.12</span><span aria-hidden="true" class="disclosure"></span></summary>
+<div class="project-content">
+<p class="project-purpose">IoT 기반 자전거 안전 관리 시스템 개발 및 임베디드 인프라 구축</p>
+<div class="architecture-details">
+<div class="arch-item">
+<strong>컨테이너:</strong> Docker 기반 컨테이너화
                                     </div>
-                                    <div class="infra-item">
-                                        <strong>센서 네트워크:</strong> Raspberry Pi +Arduino + 다중 센서
+<div class="arch-item">
+<strong>센서 네트워크:</strong> Raspberry Pi +Arduino + 다중 센서
                                     </div>
-                                </div>
-                            </div>
-
-                            <div class="my-work-section">
-                                <h4 class="my-work-title">⚡ 내가 담당한 주요 업무</h4>
-                                <ul class="my-work-list">
-                                    <li><strong>Linux 서버 환경 구축 및 Docker 컨테이너 기반 서비스 배포</strong> - ARM 아키텍처 최적화</li>
-                                    <li><strong>센서 데이터 수집 및 처리를 위한 백엔드 API 시스템 개발</strong> - GPS, 온습도, 충격감지 센서 통합</li>
-                                    <li><strong>실시간 데이터 모니터링 및 알림 시스템 구현</strong> - 동영상 스트리밍, 센서 데이터 실시간 모니터링</li>
-                                    <li><strong>하드웨어와 서버 간 통신 인터페이스 설계</strong> - MQTT 프로토콜 기반 IoT 통신</li>
-                                </ul>
-                            </div>
-
-                            <div class="project-achievements">
-                                <h4>📈 기술적 성과</h4>
-                                <ul class="achievement-list">
-                                    <li>실시간 센서 데이터 처리</li>
-                                    <li>무중단 시스템 구축</li>
-                                    <li>동양미래대학교 스마트 ICT 프로젝트 경진대회 최우수상</li>
-                                </ul>
-                            </div>
-
-                            <div class="tech-tags">
-                                <span class="tech-tag">Arduino</span>
-                                <span class="tech-tag">Raspberry Pi</span>
-                                <span class="tech-tag primary">Linux</span>
-                                <span class="tech-tag primary">Docker</span>
-                                <span class="tech-tag">Python</span>
-                                <span class="tech-tag">MQTT</span>
-                            </div>
-                            <div class="achievement">
-                                <span class="status status--success">
-                                    🏆 동양미래대학교 스마트 ICT 프로젝트 경진대회 최우수상 수상
-                                </span>
-                            </div>
-                        </div>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <!-- Contact Section -->
-        <section id="contact" class="section contact" aria-labelledby="contact-title">
-            <div class="container">
-                <h2 id="contact-title" class="section-title">연락처</h2>
-                <p class="section-description">
-                    <strong>인프라 엔지니어링 및 DevOps</strong> 관련 협업이나 취업 기회에 대해 
-                    언제든지 연락 주시기 바랍니다.
-                </p>
-                <div class="contact-content">
-                    <div class="contact-info">
-                        <div class="contact-item card">
-                            <div class="card__body">
-                                <h3>📧 이메일</h3>
-                                <p class="contact-description">업무 관련 문의사항</p>
-                                <a href="mailto:kumupaf6998@naver.com" class="contact-link">
-                                    kumupaf6998@naver.com
-                                </a>
-                            </div>
-                        </div>
-                        <div class="contact-item card">
-                            <div class="card__body">
-                                <h3>💻 GitHub</h3>
-                                <p class="contact-description">프로젝트 소스코드 및 기술 블로그</p>
-                                <a href="https://github.com/BMPDevOps" target="_blank" rel="noopener noreferrer" class="contact-link">
-                                    github.com/BMPDevOps
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2025 ParkBoMin. All rights reserved. | Infrastructure Engineer - Multi IDC Specialist</p>
-        </div>
-    </footer>
-
-    <script src="app.js"></script>
+</div><h4>수행 업무</h4><ul class="work-list"><li><strong>Linux 서버 환경 구축 및 Docker 컨테이너 기반 서비스 배포</strong> - ARM 아키텍처 최적화</li><li><strong>센서 데이터 수집 및 처리를 위한 백엔드 API 시스템 개발</strong> - GPS, 온습도, 충격감지 센서 통합</li><li><strong>실시간 데이터 모니터링 및 알림 시스템 구현</strong> - 동영상 스트리밍, 센서 데이터 실시간 모니터링</li><li><strong>하드웨어와 서버 간 통신 인터페이스 설계</strong> - MQTT 프로토콜 기반 IoT 통신</li></ul>
+<h4>결과</h4><ul class="work-list"><li>실시간 센서 데이터 처리</li><li>무중단 시스템 구축</li><li>동양미래대학교 스마트 ICT 프로젝트 경진대회 최우수상</li></ul>
+<p class="project-stack">Arduino, Raspberry Pi, Linux, Docker, Python, MQTT</p>
+</div></details>
+</section>
+<section aria-labelledby="skills-title" class="content-section" id="skills">
+<div class="section-heading"><h2 id="skills-title">기술</h2><p>실무와 프로젝트에서 사용한 도구</p></div>
+<dl class="skill-list"><div class="skill-row"><dt>컨테이너 오케스트레이션</dt><dd>Kubernetes, OpenShift/OKD, Docker, Helm</dd></div>
+<div class="skill-row"><dt>클라우드 플랫폼</dt><dd>Naver Cloud, Oracle Cloud, KT Cloud</dd></div>
+<div class="skill-row"><dt>프로그래밍</dt><dd>Python, Go, Rust, Bash, PowerShell</dd></div>
+<div class="skill-row"><dt>서버 가상화</dt><dd>VMware vSphere, Proxmox VE, KVM/QEMU</dd></div>
+<div class="skill-row"><dt>분산 스토리지</dt><dd>Ceph, TrueNAS Scale, Unraid</dd></div>
+<div class="skill-row"><dt>인프라 자동화</dt><dd>Ansible, Terraform, ArgoCD, Jenkins</dd></div>
+<div class="skill-row"><dt>모니터링 &amp; 관측</dt><dd>Prometheus, Grafana, Zabbix, Metabase, InfluxDB, Loki</dd></div>
+<div class="skill-row"><dt>네트워킹 &amp; 서비스 메시</dt><dd>Istio, Kong, Apache APISIX, NGINX</dd></div></dl>
+</section>
+<section aria-labelledby="about-title" class="content-section" id="about">
+<div class="section-heading"><h2 id="about-title">소개</h2></div>
+<div class="about-copy">
+<p>2025년 8월 25일부터 NEXTCI DevOps 운영팀에서 차량 SW 통합 CI/CD 플랫폼을 개발·운영하고 있습니다. 파이프라인 기능 개발, Kubernetes 기반 CI 이관, 5개 빌드 플랫폼의 실패 로그 분석과 GitOps 배포 파이프라인 설계를 수행했습니다.</p>
+<p>이전에는 제이메타 ITO팀에서 1년 3개월간 Windows Server·Linux 운영, PowerShell 자동화, DLP·NAC·ECM 보안 솔루션 관리를 담당했습니다.</p>
+<p>서버 인프라를 다루는 게 취미라 2019년 6월부터 Homelab을 운영하고 있습니다. ESXi, Proxmox, Ceph, OKD 등을 직접 구성하고 사용하고 있습니다.</p>
+</div>
+</section>
+<footer id="contact">
+<h2>이야기를 나누고 싶다면</h2>
+<a class="email-link" href="mailto:kumupaf6998@naver.com">kumupaf6998@naver.com</a>
+<p>DevOps, CI/CD 및 인프라 엔지니어링 관련 협업·채용 문의를 받습니다.</p>
+<div class="footer-meta"><span>© 2026 박보민</span><a href="#home">처음으로</a></div>
+</footer>
+</main>
+</div>
 </body>
 </html>
